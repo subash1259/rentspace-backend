@@ -9,9 +9,10 @@ connectDB();
 const app = express();
 
 app.use(cors({
-  origin: "http://localhost:3000",
-  credentials: true,
+  origin: ["http://localhost:3000", "https://rentspace-frontent.vercel.app"],
+  credentials: true
 }));
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -40,7 +41,3 @@ app.listen(PORT, () => {
   console.log(`✅ Server running on http://localhost:${PORT}`);
 });
 
-app.use(cors({
-  origin: "https://your-vercel-url.vercel.app", // ← Vercel URL maathu!
-  credentials: true,
-}));
