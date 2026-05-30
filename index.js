@@ -9,7 +9,12 @@ connectDB();
 const app = express();
 
 app.use(cors({
-  origin: ["http://localhost:3000", "https://rentspace-frontent.vercel.app"],
+  origin: [
+    "http://localhost:3000",
+    "https://rentspace-frontent.vercel.app",
+    "https://mernproject-rho-two.vercel.app",
+    "https://mernproject-8z14fhubg-subash-r-projects.vercel.app"
+  ],
   credentials: true
 }));
 
